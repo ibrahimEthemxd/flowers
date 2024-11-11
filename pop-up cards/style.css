@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10+Charted&family=Jersey+25&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html{
+    font-size: 10px;
+    font-family: 'Jersey', sans-serif;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(bg-flower.avif);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container{
+    display: flex;
+    width: 60vw;
+}
+.container h1{
+    font-size: 4rem;
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translate(-50%);
+    color: #ffdf00;
+}
+
+.flowers{
+    background-size: auto 100%  ;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60vh;
+    border-radius: 6px;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 1rem;
+    position: relative;
+    transition: 0.5 ease-in-out;
+}
+.flowers h3{
+    font-size: 2.6rem;
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translate(-50%);
+    margin: 0;
+    opacity: 0;
+    color: #f29;
+}
+.flowers.active{
+    flex: 4;
+}
+.flowers.active h3{
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+}
+.papatya{
+    background-image: url(papatya.jpg);
+}
+.karanfil{
+    background-image: url(karanfil.jpg);
+}
+.nilufer{
+    background-image: url(nilüfer.jpg);
+}
+.lale{
+    background-image: url(lale.jpg);
+    background-position: left;
+}
+.gul{
+    background-image: url(gul.jpg);
+}
+
+/* responsive */
+@media (max-width: 650px){
+    .container{
+        width: 80vw;
+    }
+    .flowers:nth-of-type(4),
+    .flowers:nth-of-type(5){
+        display: none;
+    }
+}
